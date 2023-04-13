@@ -32,6 +32,18 @@ knn.fit(x_train, y_train)
 
 p = knn.predict(x_test)
 
+print("Score for predicting white's rating:")
 score = accuracy_score(y_test, p)
 
 print(score)
+
+# calculate for predicting black's rating
+x_train, x_test, y2_train, y2_test = train_test_split(x, y2, test_size=0.5)
+knn.fit(x_train, y2_train)
+
+p2 = knn.predict(x_test)
+
+print("Score for predicting black's rating:")
+score2 = accuracy_score(y2_test, p2)
+
+print(score2)
