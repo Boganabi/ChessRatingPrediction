@@ -25,7 +25,7 @@ enc.fit(x)
 # x = enc.transform(x).toarray()
 x = enc.transform(x)
 
-poly = PolynomialFeatures(degree=2, include_bias=False)
+poly = PolynomialFeatures(degree=3, include_bias=False)
 
 pf = poly.fit_transform(x)
 
